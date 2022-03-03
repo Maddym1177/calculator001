@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+}
+
+.card{
+    border-radius:50px ;
+}
+
+.nums{
+    border-radius: 30px;
+    background-color: aliceblue;
+}
+
+.nums input{
+    border-radius: 30px;
+    background-color:antiquewhite;
+    margin: 1rem;
+    height: 50px;
+    width: 200px;
+}
+
+.btnTable button{
+    font-size: 40px;
+    width: 96px;
+    /* padding: 20px; */
+    margin: 10px;
+    border-radius: 20px;
+    background-color: rgba(238, 238, 238, 0.774);
+}
+
+.btnTable{
+    align-items: center;
+    justify-content: space-between;
+    background-color:rgba(180, 178, 178, 0.425);
+    border-radius: 30px;
+}
