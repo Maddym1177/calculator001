@@ -29,6 +29,7 @@
 }
 
 .btnTable{
+    display: flex;
     align-items: center;
     justify-content: space-between;
     background-color:rgba(180, 178, 178, 0.425);

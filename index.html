@@ -13,10 +13,10 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-3"></div>
+            <div class="col-md-3"></div>
             <!-- calculator start -->
 
-            <div class="col-lg-6">
+            <div class="col-md-6">
                 <div class="card border-primary mt-3">
                     <!-- Header of card Calculator -->
                     <div class="card-header d-flex align-items-center justify-content-center">
@@ -27,12 +27,30 @@
                     <div class="cardBody m-3 border border-bottom">
                         <!-- inputs -->
                         <div class="nums m-2  d-flex align-items-center justify-content-between ">
-                            <input type="text" id="num1">
-                            <input type="text" id="num2">
+                            <input type="text" class="form-controls" id="num1" />
+                            <input type="text" class="form-controls" id="num2" />
+                        </div>
+
+                        <div class="op d-flex align-items-center justify-content-between m-2">
+                            <div class="noAdd ">
+                                <button onclick="add()" class="btn btn-secondary" type="button">Addition</button>
+                            </div>
+
+                            <div class="noSub">
+                                <button onclick="sub()" class="btn btn-secondary" type="button">Subtraction</button>
+                            </div>
+
+                            <div class="noMul ">
+                                <button onclick="mul()" class="btn btn-secondary" type="button">Multiplication</button>
+                            </div>
+
+                            <div class="noDiv">
+                                <button onclick="div()" class="btn btn-secondary" type="button">Division</button>
+                            </div>
                         </div>
 
                         <!-- Buttons  -->
-                        <div class="btnTable">
+                        <!-- <div class="btnTable">
                             <table>
                                 <tr>
                                     <td><button>7</button></td>
@@ -63,6 +81,9 @@
                                 </tr>
                             </table>
 
+                        </div> -->
+                        <div class="alert alert-dark " id="Result" role="alert">
+
                         </div>
 
                     </div>
@@ -71,7 +92,7 @@
             </div>
 
             <!-- calculator end -->
-            <div class="col-lg-3"></div>
+            <div class="col-md-3"></div>
         </div>
     </div>
 
