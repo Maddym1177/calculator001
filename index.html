@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Calculator</title>
 </head>
@@ -12,11 +14,9 @@
 <body>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-3"></div>
             <!-- calculator start -->
 
-            <div class="col-md-6">
+            <div class="calculator">
                 <div class="card border-primary mt-3">
                     <!-- Header of card Calculator -->
                     <div class="card-header d-flex align-items-center justify-content-center">
@@ -30,6 +30,9 @@
                             <input type="text" class="form-controls" id="num1" />
                             <input type="text" class="form-controls" id="num2" />
                         </div>
+
+                        <div class="outPut alert alert-dark " id="Result" role="alert"></div>
+
 
                         <div class="op d-flex align-items-center justify-content-between m-2">
                             <div class="noAdd ">
@@ -50,41 +53,53 @@
                         </div>
 
                         <!-- Buttons  -->
-                        <!-- <div class="btnTable">
+                         <div class="btnTable">
                             <table>
+                                <tr>
+                                    <td><button>(</button></td>
+                                    <td><button>)</button></td>
+                                    <td><button><span class="material-icons">arrow_back</span></button></td>
+                                    <td><button>C</button></td>
+                                </tr>
+
                                 <tr>
                                     <td><button>7</button></td>
                                     <td><button>8</button></td>
                                     <td><button>9</button></td>
-                                    <td><button>+</button></td>
+                                    <td class="noAdd" >
+                                        <button onclick="add()" class="btn btn-secondary" type="button">+</button>
+                                    </td>                                
                                 </tr>
 
                                 <tr>
                                     <td><button>4</button></td>
                                     <td><button>5</button></td>
                                     <td><button>6</button></td>
-                                    <td><button>-</button></td>
+                                    <td class="noSub">
+                                        <button onclick="sub()" class="btn btn-secondary" type="button">-</button>
+                                    </td>
                                 </tr>
 
                                 <tr>
                                     <td><button>1</button></td>
                                     <td><button>2</button></td>
                                     <td><button>3</button></td>
-                                    <td><button>*</button></td>
+                                    <td class="noMul ">
+                                        <button onclick="mul()" class="btn btn-secondary" type="button">x</button>
+                                    </td>
                                 </tr>
 
                                 <tr>
                                     <td><button>.</button></td>
                                     <td><button>0</button></td>
                                     <td><button>=</button></td>
-                                    <td><button>/</button></td>
+                                    <td class="noDiv">
+                                        <button onclick="div()" class="btn btn-secondary" type="button">/</button>
+                                    </td>
                                 </tr>
                             </table>
 
-                        </div> -->
-                        <div class="alert alert-dark " id="Result" role="alert">
-
-                        </div>
+                        </div> 
 
                     </div>
 
@@ -92,8 +107,6 @@
             </div>
 
             <!-- calculator end -->
-            <div class="col-md-3"></div>
-        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

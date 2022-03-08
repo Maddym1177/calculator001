@@ -2,6 +2,20 @@
     margin: 0;
 }
 
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    margin: auto;
+}
+
+.calculator{
+    display: inline-block;
+}
+
 .card{
     border-radius:50px ;
 }
