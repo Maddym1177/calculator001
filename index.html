@@ -5,108 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <title>Calculator</title>
 </head>
 
 <body>
 
-    <div class="container">
-            <!-- calculator start -->
+    <div class="container col-md-12 p-3">
+        
+        <div class="calculator ">
 
-            <div class="calculator">
-                <div class="card border-primary mt-3">
-                    <!-- Header of card Calculator -->
-                    <div class="card-header d-flex align-items-center justify-content-center">
-                        Calculator
-                    </div>
+            <h1>Calculator</h1>
 
-                    <!-- Body of card Calculator -->
-                    <div class="cardBody m-3 border border-bottom">
-                        <!-- inputs -->
-                        <div class="nums m-2  d-flex align-items-center justify-content-between ">
-                            <input type="text" class="form-controls" id="num1" />
-                            <input type="text" class="form-controls" id="num2" />
-                        </div>
+            <input type="text" name="screen" id="screen">
 
-                        <div class="outPut alert alert-dark " id="Result" role="alert"></div>
+            <table>
+                <tr>
+                    <td><button>(</button></td>
+                    <td><button>)</button></td>
+                    <td><button>C</button></td>
+                    <td><button><</button></td>
+                    <!-- <td><button><span class="material-icons">arrow_back</span></button></td> -->
+                </tr>
 
+                <tr>
+                    <td><button>1</button></td>
+                    <td><button>2</button></td>
+                    <td><button>3</button></td>
+                    <td><button>+</button></td>
+                </tr>
 
-                        <div class="op d-flex align-items-center justify-content-between m-2">
-                            <div class="noAdd ">
-                                <button onclick="add()" class="btn btn-secondary" type="button">Addition</button>
-                            </div>
+                <tr>
+                    <td><button>4</button></td>
+                    <td><button>5</button></td>
+                    <td><button>6</button></td>
+                    <td><button>-</button></td>
+                </tr>
 
-                            <div class="noSub">
-                                <button onclick="sub()" class="btn btn-secondary" type="button">Subtraction</button>
-                            </div>
+                <tr>
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>x</button></td>
+                </tr>
 
-                            <div class="noMul ">
-                                <button onclick="mul()" class="btn btn-secondary" type="button">Multiplication</button>
-                            </div>
+                <tr>
+                    <td><button>.</button></td>
+                    <td><button>0</button></td>
+                    <td><button>=</button></td>
+                    <td><button>/</button></td>
+                </tr>
+            </table>
 
-                            <div class="noDiv">
-                                <button onclick="div()" class="btn btn-secondary" type="button">Division</button>
-                            </div>
-                        </div>
-
-                        <!-- Buttons  -->
-                         <div class="btnTable">
-                            <table>
-                                <tr>
-                                    <td><button>(</button></td>
-                                    <td><button>)</button></td>
-                                    <td><button><span class="material-icons">arrow_back</span></button></td>
-                                    <td><button>C</button></td>
-                                </tr>
-
-                                <tr>
-                                    <td><button>7</button></td>
-                                    <td><button>8</button></td>
-                                    <td><button>9</button></td>
-                                    <td class="noAdd" >
-                                        <button onclick="add()" class="btn btn-secondary" type="button">+</button>
-                                    </td>                                
-                                </tr>
-
-                                <tr>
-                                    <td><button>4</button></td>
-                                    <td><button>5</button></td>
-                                    <td><button>6</button></td>
-                                    <td class="noSub">
-                                        <button onclick="sub()" class="btn btn-secondary" type="button">-</button>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><button>1</button></td>
-                                    <td><button>2</button></td>
-                                    <td><button>3</button></td>
-                                    <td class="noMul ">
-                                        <button onclick="mul()" class="btn btn-secondary" type="button">x</button>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><button>.</button></td>
-                                    <td><button>0</button></td>
-                                    <td><button>=</button></td>
-                                    <td class="noDiv">
-                                        <button onclick="div()" class="btn btn-secondary" type="button">/</button>
-                                    </td>
-                                </tr>
-                            </table>
-
-                        </div> 
-
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- calculator end -->
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

@@ -1,27 +1,56 @@
-function add(){
-    var num1 = document.querySelector('#num1').value;
-    var num2 = document.querySelector('#num2').value;
-      var num3 = parseInt(num1) + parseInt(num2);
-    document.querySelector('#Result').innerHTML = "The result is " + " " + num3;
-}
+let screen = document.getElementById('screen');
+buttons = document.querySelectorAll('button');
+let screenValue = ' ';
+for(item of buttons){
+  item.addEventListener('click', (e)=>{
+    buttonText = e.target.innerHTML;
+    console.log('button text is ', buttonText);
+    if(buttonText=='+'){
+      buttonText = '+';
+      screenValue += buttonText;
+      screen.value = screenValue;
+    }
 
-function sub(){
-    var num1 = document.querySelector('#num1').value;
-    var num2 = document.querySelector('#num2').value;
-      var num3 = parseInt(num1) - parseInt(num2);
-    document.querySelector('#Result').innerHTML = "The result is " + " " + num3;
-}
+    else if(buttonText=='-'){
+      buttonText = '-';
+      screenValue += buttonText;
+      screen.value = screenValue;
+    }
 
-function mul(){
-    var num1 = document.querySelector('#num1').value;
-    var num2 = document.querySelector('#num2').value;
-      var num3 = parseInt(num1) * parseInt(num2);
-    document.querySelector('#Result').innerHTML = "The result is " + " " + num3;
-}
+    else if(buttonText=='x'){
+      buttonText = '*';
+      screenValue += buttonText;
+      screen.value = screenValue;
+    }
 
-function div(){
-    var num1 = document.querySelector('#num1').value;
-    var num2 = document.querySelector('#num2').value;
-      var num3 = parseInt(num1) / parseInt(num2);
-    document.querySelector('#Result').innerHTML = "The result is " + " " + num3;
+    else if(buttonText=='/'){
+      buttonText = '/';
+      screenValue += buttonText;
+      screen.value = screenValue;
+    }
+
+    // else if(buttonText=='<'){
+      // buttonText = '+';
+      // screenValue += buttonText;
+    //   screenValue = screen.value.slice(0, -1);
+    // }
+    
+    else if(buttonText=='C'){
+      screenValue = "";
+      screen.value = screenValue;
+    }
+
+    else if(buttonText=='='){
+      screenValue = eval(screenValue);
+      screen.value = screenValue;
+
+    }
+
+    else{
+      screenValue += buttonText;
+      screen.value = screenValue;
+    }
+
+
+  })
 }
